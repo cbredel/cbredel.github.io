@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+        <!-- Chargement de librairie externe -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.css">
+        <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+        <script src=" https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.js"></script>
+        
+        <!-- Definition de style Interne -->
+        
+         <style>
+        #mapid { height: 600px; }
+        </style>
+        
+        <!--Chargement des données en GeoJson -->
+        <script src="data/section.geojson"></script>
+        <script src="data/parcelles.geojson"></script>
+        <script src="data/batiments.geojson"></script>
+        
+    </head>
+    <body>
+        <input type='button' value='Zoom Global' onclick='ZoomGlobal()' />
+        <input type='button' value='Masque Section' onclick='AfficheSection()' id='btnAfficheSection' />
+        <input type='button' value='Masque Parcelle' onclick='AfficheParcelle()' id='btnAfficheParcelle'/>
+        <input type='button' value='Masque Batiment' onclick='AfficheBatiment()' id='btnAfficheBatiment' />
+        <select id="mesSections" onchange="changeSection()"><option value=""></option></select>
+        <div id='mapid'></div>
+        
+        
+        <script src="js/script.js"></script>
+    </body>
+</html>
